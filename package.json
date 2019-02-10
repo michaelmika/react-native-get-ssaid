@@ -1,18 +1,44 @@
 {
-  "name": "react-native-react-native-get-ssaid",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "react-native-get-ssaid",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native", "ssaid", "deviceID"
   ],
-  "author": "",
-  "license": "",
+  "author": {
+    "name": "Michael Raring"
+  },
+  "bugs": {
+    "url": "https://github.com/michaelmika/react-native-simple-native-geofencing/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Fabian Puch"
+    }
+  ],
+  "deprecated": false,
+  "description": "Simple API for getting the SSAID on android",
+  "homepage": "https://github.com/michaelmika/react-native-get-ssaid#readme",
+  "keywords": [
+    "react-native",
+    "geofence",
+    "geofencing",
+    "native"
+  ],
+  "license": "MIT",
+  "main": "index.js",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelmika/react-native-get-ssaid.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.7.0"
 }

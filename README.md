@@ -1,13 +1,15 @@
 
-# react-native-react-native-get-ssaid
+# react-native-get-ssaid
+
+Very simple Module to get the SSAID (or Android ID) on android. To read more about SSAID and the changes since android O refer to [this blogpost](https://android-developers.googleblog.com/2017/04/changes-to-device-identifiers-in.html).
 
 ## Getting started
 
-`$ npm install react-native-react-native-get-ssaid --save`
+`$ npm install react-native-get-ssaid --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-react-native-get-ssaid`
+`$ react-native link react-native-get-ssaid`
 
 ### Manual installation
 
@@ -15,7 +17,7 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-react-native-get-ssaid` and add `RNReactNativeGetSsaid.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-get-ssaid` and add `RNReactNativeGetSsaid.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNReactNativeGetSsaid.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -26,18 +28,18 @@
   - Add `new RNReactNativeGetSsaidPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-react-native-get-ssaid'
-  	project(':react-native-react-native-get-ssaid').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-react-native-get-ssaid/android')
+  	include ':react-native-get-ssaid'
+  	project(':react-native-get-ssaid').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-get-ssaid/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-react-native-get-ssaid')
+      compile project(':react-native-get-ssaid')
   	```
 
 #### Windows
 [Read it! :D](https://github.com/ReactWindows/react-native)
 
-1. In Visual Studio add the `RNReactNativeGetSsaid.sln` in `node_modules/react-native-react-native-get-ssaid/windows/RNReactNativeGetSsaid.sln` folder to their solution, reference from their app.
+1. In Visual Studio add the `RNReactNativeGetSsaid.sln` in `node_modules/react-native-get-ssaid/windows/RNReactNativeGetSsaid.sln` folder to their solution, reference from their app.
 2. Open up your `MainPage.cs` app
   - Add `using React.Native.Get.Ssaid.RNReactNativeGetSsaid;` to the usings at the top of the file
   - Add `new RNReactNativeGetSsaidPackage()` to the `List<IReactPackage>` returned by the `Packages` method
@@ -45,9 +47,15 @@
 
 ## Usage
 ```javascript
-import RNReactNativeGetSsaid from 'react-native-react-native-get-ssaid';
+import RNReactNativeGetSsaid from 'react-native-get-ssaid';
 
 // TODO: What to do with the module?
-RNReactNativeGetSsaid;
+RNReactNativeGetSsaid.get().then(
+    id => console.log(id)
+  ).catch(
+    err => console.log(err)
+  );
 ```
   
+# License
+This code is under [MIT license](https://opensource.org/licenses/MIT) and opened for contribution! Author is Michael Raring.  
