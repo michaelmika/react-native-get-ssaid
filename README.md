@@ -50,7 +50,7 @@ Very simple Module to get the SSAID (or Android ID) on android. To read more abo
 import RNReactNativeGetSsaid from 'react-native-get-ssaid';
 
 // TODO: What to do with the module?
-RNReactNativeGetSsaid.get().then(
+RNReactNativeGetSsaid.getID().then(
     id => console.log(id)
   ).catch(
     err => console.log(err)
