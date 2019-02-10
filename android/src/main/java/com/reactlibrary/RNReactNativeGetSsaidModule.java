@@ -6,6 +6,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
+import android.provider.Settings.Secure;
 
 public class RNReactNativeGetSsaidModule extends ReactContextBaseJavaModule {
 
@@ -24,8 +25,7 @@ public class RNReactNativeGetSsaidModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getID(Promise promise) {
   	try {
-  		String android_id = Secure.getString(this.reactContext.getContentResolver(),
-                                                        Secure.ANDROID_ID); 
+  		String android_id = Secure.getString(this.reactContext.getContentResolver(), Secure.ANDROID_ID); 
   		promise.resolve(android_id);
   	}catch (Exception e) {
       promise.reject(e);
