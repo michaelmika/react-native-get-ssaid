@@ -1,5 +1,5 @@
 
-package com.reactlibrary;
+package com.michaelraring.getSSAID;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -8,18 +8,18 @@ import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
 import android.provider.Settings.Secure;
 
-public class RNReactNativeGetSsaidModule extends ReactContextBaseJavaModule {
+public class RNGetSsaidModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public RNReactNativeGetSsaidModule(ReactApplicationContext reactContext) {
+  public RNGetSsaidModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }
 
   @Override
   public String getName() {
-    return "RNReactNativeGetSsaid";
+    return "RNGetSsaid";
   }
 
   @ReactMethod
@@ -32,5 +32,4 @@ public class RNReactNativeGetSsaidModule extends ReactContextBaseJavaModule {
     }
   	
   }
-
 }

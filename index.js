@@ -1,6 +1,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNReactNativeGetSsaid } = NativeModules;
+const { RNGetSsaid } = NativeModules;
 
-export default RNReactNativeGetSsaid;
+export default RNGetSsaid;
